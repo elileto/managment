@@ -1,0 +1,27 @@
+<%= form_with(model: material_product, local: true) do |form| %>
+  <% if material_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(material_product.errors.count, "error") %> prohibited this material_product from being saved:</h2>
+
+      <ul>
+      <% material_product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :material_id %>
+    <%= form.number_field :material_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.number_field :product_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

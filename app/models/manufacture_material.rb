@@ -1,0 +1,2 @@
+class ManufactureMaterial < ApplicationRecord
+end

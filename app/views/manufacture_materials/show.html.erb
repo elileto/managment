@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @manufacture_material.material_id %>
+</p>
+
+<p>
+  <strong>Manufacture:</strong>
+  <%= @manufacture_material.manufacture_id %>
+</p>
+
+<%= link_to 'Edit', edit_manufacture_material_path(@manufacture_material) %> |
+<%= link_to 'Back', manufacture_materials_path %>

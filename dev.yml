@@ -13,8 +13,8 @@ up:
   - bundler
   - railgun
   - database:
-      bootstrap: bin/rails db:create db:migrate db:schema:load
-      migrate: bin/rails db:migrate db:test:prepare
+      bootstrap: bin/rails db:create db:schema:load
+      migrate: bin/rails db:schema:load db:test:prepare
       host: management.railgun
       user: root
       password: ''

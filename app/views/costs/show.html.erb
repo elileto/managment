@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @cost.material_id %>
+</p>
+
+<p>
+  <strong>Price per unit:</strong>
+  <%= @cost.price_per_unit %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @cost.unit %>
+</p>
+
+<%= link_to 'Edit', edit_cost_path(@cost) %> |
+<%= link_to 'Back', costs_path %>

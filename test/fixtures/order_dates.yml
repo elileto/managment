@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_placed: 2018-10-14 18:09:07
+  order_received: 2018-10-14 18:09:07
+  order_complete: false
+
+two:
+  order_placed: 2018-10-14 18:09:07
+  order_received: 2018-10-14 18:09:07
+  order_complete: false

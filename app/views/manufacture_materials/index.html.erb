@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Manufacture Materials</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Material</th>
+      <th>Manufacture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @manufacture_materials.each do |manufacture_material| %>
+      <tr>
+        <td><%= manufacture_material.material_id %></td>
+        <td><%= manufacture_material.manufacture_id %></td>
+        <td><%= link_to 'Show', manufacture_material %></td>
+        <td><%= link_to 'Edit', edit_manufacture_material_path(manufacture_material) %></td>
+        <td><%= link_to 'Destroy', manufacture_material, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Manufacture Material', new_manufacture_material_path %>

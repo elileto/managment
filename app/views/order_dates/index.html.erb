@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Order Dates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order placed</th>
+      <th>Order received</th>
+      <th>Order complete</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @order_dates.each do |order_date| %>
+      <tr>
+        <td><%= order_date.order_placed %></td>
+        <td><%= order_date.order_received %></td>
+        <td><%= order_date.order_complete %></td>
+        <td><%= link_to 'Show', order_date %></td>
+        <td><%= link_to 'Edit', edit_order_date_path(order_date) %></td>
+        <td><%= link_to 'Destroy', order_date, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order Date', new_order_date_path %>
