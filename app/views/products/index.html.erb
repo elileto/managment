@@ -1,3 +1,4 @@
+<%= javascript_pack_tag('product_table')%>
 <p id="notice"><%= notice %></p>
 
 <h1>Products</h1>
@@ -24,6 +25,16 @@
   </tbody>
 </table>
 
-<br>
+
+<%= content_tag :div,
+  id: "products_data",
+  data: @products.to_json do %>
+  
+<% end %>
+
+<div id="Product-Table-Component"></div>
+
+
+
 
 <%= link_to 'New Product', new_product_path %>
