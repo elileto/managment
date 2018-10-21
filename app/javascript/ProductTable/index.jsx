@@ -94,7 +94,7 @@ class ProductTable extends React.Component {
               
               console.log("Success");
               $.ajax({
-                url: `app/controllers/api/v1/products/${selected}`,
+                url: `/products/${selected}`,
                 //type: 'DELETE',
                 method: 'delete',
                 success(response) { 
