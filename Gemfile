@@ -5,6 +5,7 @@ ruby '2.5.1'
 
 #For React
 gem 'webpacker', '~> 3.0'
+gem 'responders'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
