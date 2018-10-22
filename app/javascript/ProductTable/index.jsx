@@ -28,6 +28,14 @@ class ProductTable extends React.Component {
     console.log(selectedItems);
   };
 
+  removeItemClient(id) {
+    var newItems = this.state.items.filter((item) => {
+        return item.id != id;
+    });
+
+    this.setState({ items: newItems });
+},
+
 //  removeItemClient = (id) => {
 //    var newItems = this.state.items.filter((item) => {
 //        return item.id != id;
@@ -94,11 +102,12 @@ class ProductTable extends React.Component {
               
               console.log("Success");
               $.ajax({
-                url: `/products/${selected}`,
+                url: `api/v1/products/${selected}`,
                 //type: 'DELETE',
                 method: 'delete',
                 success(response) { 
-                    console.log('successfully removed item')
+                    console.log('successfully removed item');
+                    this.removeItemClient(selected);
                 }
             });
               //return fetch('products/' + selected, {
